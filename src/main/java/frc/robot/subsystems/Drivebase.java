@@ -5,7 +5,9 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.RobotConstants;
 
 
 public class Drivebase extends SubsystemBase
@@ -13,7 +15,8 @@ public class Drivebase extends SubsystemBase
     /** Creates a new Drivebase. */
     public Drivebase()
     {
-        
+        TalonSRX left = new TalonSRX(RobotConstants.leftDriveBaseMotor);
+        TalonSRX right = new TalonSRX(RobotConstants.rightDriveBaseMotor);
     }
     
 
